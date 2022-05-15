@@ -3,18 +3,18 @@ import './App.css';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import 'firebase/compat/auth';
-
+import config from '../config';
 import {useAuthState} from 'react-firebase-hooks/auth';
 
 import {useCollectionData} from 'react-firebase-hooks/firestore';
 
 firebase.initializeApp({
-  apiKey: "AIzaSyAVQb0cOPe99f3Dfb7fqZ1rz35F5tyML_8",
+  apiKey: config.SECRET_API_KEY,
   authDomain: "chat-app-360fd.firebaseapp.com",
   projectId: "chat-app-360fd",
   storageBucket: "chat-app-360fd.appspot.com",
   messagingSenderId: "598311299334",
-  appId: "1:598311299334:web:cbc6757e52ae510961d687",
+  appId: config.MY_API_TOKEN,
   measurementId: "G-DF8BM89MHG"
 
 });
